@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900;1000&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+     /* NAVBAAR */
+.navbar{
+    width: 100%;
+    height: 70px;
+    background-color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4%;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+}
+.navbar .logo{
+    font-size: 27px;
+    color: #fff;
+}
+.navbar .logo>span{
+    color: #fc00fc;
+}
+.navbar ul{
+    display: flex;
+}
+.navbar ul li{
+    list-style: none;
+    margin: 0 10px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 15px;
+    text-transform: uppercase;
+    color: #fff;
+}
+#menuBtn{
+    color: #fff;
+    font-size: 23px;
+}
+.menu{
+    display: none;
+}
+     /* HERO SECTION */
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #222;
+    padding: 0 4%;
+}
+.left{
+    width: 50%;
+    height: 100%;
+    /* background-color: red; */
+    color: #fff;
+}
+.left h2{
+    font-size: 3vw;
+    line-height: 1;
+    padding-top: 160px;
+}
+.left p{
+    font-size: 1.3vw;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.left #btn{
+    padding: 10px 30px;
+    background-color: #fc00fc;
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 3px;
+}
+
+#btn:hover{
+    animation: rotate 0.3s ease-in-out both;
+    
+}
+@keyframes rotate {
+    0%{
+        padding: 10px 30px;
+    }
+    25%{
+        padding: 5px 40px;
+    }
+    50%{
+        padding: 4px 30px;
+    }
+    75%{
+        padding: 7px 24px;
+    }
+    100%{
+        padding: 10px 30px;
+    }
+    
+}
+
+.right{
+    width: 50%;
+    height: 100%;
+    /* background-color: yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.right img{
+    width: 40vw;
+    height: 40vw;
+    object-fit: cover;
+    object-position: center;
+    filter: drop-shadow(20px 40px 25px black);
+    margin-top: 50px;
+}
+#hidden{
+    display: none;
+}
+
+
+@media(max-width:680px){
+    #hidden{
+        display: block;
+    }
+    .menu{
+        display: block;
+    }
+    .navbar ul{
+        display: block;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: #000;
+        text-align: center;
+        overflow: hidden;
+        transition: .3s ease-in-out;
+        background: rgb(65,23,180);
+        background: linear-gradient(184deg, rgba(65,23,180,1) 4%, rgba(128,24,202,1) 56%, rgba(160,23,190,1) 76%);
+    }
+    .navbar ul li{
+        padding: 15px 0;
+    }
+    .navbar ul li a{
+        padding: 5px 14px;
+    }
+    .navbar ul li a:hover{
+        text-decoration: underline;
+    }
+
+    .container{
+        height: 100%;
+        display: block;
+        text-align: center;
+        padding: 0 2%;
+        background: rgb(65,23,180);
+        background: linear-gradient(184deg, rgba(65,23,180,1) 4%, rgba(128,24,202,1) 56%, rgba(160,23,190,1) 76%);
+    }
+    .left{
+        width: 100%;
+    }
+    .left h2{
+        font-size: 28px;
+    }
+    .left p{
+        font-size: 12.3px;
+        margin-bottom: 30px;
+    }
+    .left #btn{
+        padding: 5px 15px;
+        border: 2px solid #fff;
+        color: #fff;
+        font-size: 15px;
+        background: none;
+        border-radius: 10px;
+        display: block;
+    }
+    #btn:hover{
+        background: rgb(99, 19, 238);
+    }
+    .right{
+        width: 100%;
+        height: 100vh;
+    }
+    .right img{
+        width: 70vw;
+        height: 70vw;
+        filter: drop-shadow(20px 20px 25px black);
+    }
+
+}
